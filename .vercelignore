@@ -1,0 +1,7 @@
+node_modules
+frontend/dist
+frontend/dist-static
+data/missions
+data/landsight.db
+**/__pycache__
+**/.venv
