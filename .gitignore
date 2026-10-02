@@ -6,3 +6,4 @@ __pycache__/
 data/missions/
 data/landsight.db
 frontend/dist-static/
+.vercel/
