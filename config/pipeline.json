@@ -1,0 +1,56 @@
+{
+  "_comment": "All pipeline tuning lives here. Thresholds and performance targets are configuration, not code.",
+  "camera": {
+    "image_width": 1280,
+    "image_height": 720,
+    "hfov_deg": 70.0,
+    "mount": "nadir"
+  },
+  "processing": {
+    "fps": 5
+  },
+  "detector": {
+    "kind": "replay",
+    "yolo_weights": "yolov8n.pt",
+    "person_class": 0,
+    "min_conf": 0.15
+  },
+  "tracker": {
+    "high_thresh": 0.5,
+    "low_thresh": 0.15,
+    "new_track_thresh": 0.3,
+    "gate_m": 1.6,
+    "max_age_frames": 15,
+    "min_hits": 3,
+    "ema": 0.35
+  },
+  "dedup": {
+    "merge_radius_m": 2.5
+  },
+  "movement": {
+    "bbox_area_cv": 0.18,
+    "speed_mps": 0.25,
+    "min_duration_s": 1.5
+  },
+  "location": {
+    "uere_m": 1.2,
+    "alt_error_frac": 0.02,
+    "high_max_m": 2.5,
+    "medium_max_m": 5.0
+  },
+  "priority": {
+    "confidence_points": [[0.85, 3], [0.65, 2], [0.45, 1]],
+    "persistence_points": [[3.0, 2], [1.0, 1]],
+    "movement_points": 2,
+    "location_points": { "High": 1, "Medium": 0, "Low": 0 },
+    "high_min": 6,
+    "medium_min": 4
+  },
+  "targets": {
+    "min_inference_fps": 5,
+    "max_latency_ms": 500,
+    "min_recall": 0.9,
+    "max_duplicate_rate": 0.05,
+    "max_geo_error_m": 5.0
+  }
+}

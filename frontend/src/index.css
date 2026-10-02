@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-bg: #07090b;
+  --color-panel: #0d1215;
+  --color-panel-2: #131a1e;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-line-2: rgb(255 255 255 / 0.16);
+  --color-ink: #e7ece9;
+  --color-muted: #8b9792;
+  --color-dim: #5c6762;
+  --color-signal: #ff7a1a;
+  --color-hud: #5ef2c2;
+  --color-high: #ff4d3d;
+  --color-medium: #ffb020;
+  --color-low: #78beff;
+  --color-ok: #3ddc84;
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; background: var(--color-bg); }
+body { background: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--color-signal); color: #000; }
+
+.label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); }
+.hud-corners { position: relative; }
+.hud-corners::before, .hud-corners::after { content: ""; position: absolute; width: 14px; height: 14px; border-color: var(--color-hud); pointer-events: none; }
+.hud-corners::before { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; }
+.hud-corners::after { bottom: -1px; right: -1px; border-bottom: 2px solid; border-right: 2px solid; }
+
+.grid-bg { background-image: linear-gradient(var(--color-line) 1px, transparent 1px), linear-gradient(90deg, var(--color-line) 1px, transparent 1px); background-size: 48px 48px; }
+.scanlines { background: repeating-linear-gradient(0deg, rgb(0 0 0 / 0.12) 0 1px, transparent 1px 3px); }
+
+/* data packets travelling along a pipeline connector */
+@keyframes packet { from { offset-distance: 0%; opacity: 0 } 10% { opacity: 1 } 90% { opacity: 1 } to { offset-distance: 100%; opacity: 0 } }
+@keyframes flow-x { from { background-position: 0 0 } to { background-position: 40px 0 } }
+@keyframes flow-y { from { background-position: 0 0 } to { background-position: 0 40px } }
+.flow-x { background: repeating-linear-gradient(90deg, var(--color-hud) 0 6px, transparent 6px 40px); animation: flow-x 1.2s linear infinite; }
+.flow-y { background: repeating-linear-gradient(180deg, var(--color-hud) 0 6px, transparent 6px 40px); animation: flow-y 1.2s linear infinite; }
+@keyframes pulse-ring { 0% { transform: scale(0.6); opacity: 0.9 } 100% { transform: scale(2.4); opacity: 0 } }
+@keyframes blink { 50% { opacity: 0.2 } }
+.blink { animation: blink 1.2s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
+
+/* Leaflet, dark command-center skin */
+.leaflet-container { background: #0b1013; font-family: var(--font-sans); }
+.leaflet-control-attribution { background: rgb(7 9 11 / 0.7) !important; color: var(--color-dim) !important; font-size: 10px; }
+.leaflet-control-attribution a { color: var(--color-muted) !important; }
+.leaflet-bar a { background: var(--color-panel) !important; color: var(--color-ink) !important; border-color: var(--color-line) !important; }
+.leaflet-tooltip.ls-tip { background: rgb(7 9 11 / 0.92); color: var(--color-ink); border: 1px solid var(--color-line-2); border-radius: 2px; font-family: var(--font-mono); font-size: 11px; box-shadow: none; padding: 3px 6px; }
+.leaflet-tooltip.ls-tip::before { display: none; }
+.ls-marker { position: relative; }
+.ls-marker .ring { position: absolute; inset: 0; border-radius: 50%; border: 2px solid currentColor; animation: pulse-ring 1.8s ease-out infinite; }
+.ls-marker .dot { position: absolute; inset: 4px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 2px #07090b, 0 0 12px currentColor; }
+.ls-marker.sel .dot { box-shadow: 0 0 0 2px #fff, 0 0 16px currentColor; }
+
+input[type="range"].scrub { appearance: none; height: 4px; background: var(--color-line-2); border-radius: 2px; }
+input[type="range"].scrub::-webkit-slider-thumb { appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--color-signal); cursor: pointer; }
+input[type="range"].scrub::-moz-range-thumb { width: 12px; height: 12px; border: 0; border-radius: 50%; background: var(--color-signal); cursor: pointer; }
