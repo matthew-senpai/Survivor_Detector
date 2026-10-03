@@ -7,3 +7,4 @@ data/missions/
 data/landsight.db
 frontend/dist-static/
 .vercel/
+.env*
