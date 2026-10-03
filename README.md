@@ -7,6 +7,13 @@ Software-first prototype. The full pipeline runs on recorded data (synthetic aer
 telemetry CSV, pre-recorded detections) and is designed so a real UAV, camera and edge computer replace
 the inputs without touching anything downstream. Every simulated element is labelled as such in the UI.
 
+## Two apps
+
+| | What | Where |
+|---|---|---|
+| **Landsight** (`frontend/` + `backend/`) | Concept site + command center replaying the simulated sample mission | https://survivor-detector.vercel.app |
+| **Landsight Field** (`field/`) | Real drone input + real in-browser person detection (YOLO11n on WebGPU): capture card / screen / video file, MAVLink / DJI SRT / CSV telemetry | see [field/README.md](field/README.md) |
+
 ## Run it
 
 Requirements: Python 3.11+ and Node 20+.

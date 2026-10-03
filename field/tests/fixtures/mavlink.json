@@ -1,0 +1,269 @@
+[
+ {
+  "label": "HEARTBEAT v2",
+  "msgid": 0,
+  "hex": "fd0900000001010000000400000002035104037bae",
+  "fields": {
+   "type": 2,
+   "autopilot": 3,
+   "base_mode": 81,
+   "custom_mode": 4,
+   "system_status": 4,
+   "mavlink_version": 3
+  }
+ },
+ {
+  "label": "GLOBAL_POSITION_INT v2",
+  "msgid": 33,
+  "hex": "fd1c000000010121000040e201006922d7061d7b622dec520200f276000000fee600f6ff0e6abc24",
+  "fields": {
+   "time_boot_ms": 123456,
+   "lat": 114762345,
+   "lon": 761428765,
+   "alt": 152300,
+   "relative_alt": 30450,
+   "vx": -512,
+   "vy": 230,
+   "vz": -10,
+   "hdg": 27150
+  }
+ },
+ {
+  "label": "GPS_RAW_INT v2",
+  "msgid": 24,
+  "hex": "fd1e0000000101180000b168de3a000000006922d7061d7b622dec5202005c008c00f701dc69030f5a13",
+  "fields": {
+   "time_usec": 987654321,
+   "fix_type": 3,
+   "lat": 114762345,
+   "lon": 761428765,
+   "alt": 152300,
+   "eph": 92,
+   "epv": 140,
+   "vel": 503,
+   "cog": 27100,
+   "satellites_visible": 15
+  }
+ },
+ {
+  "label": "ATTITUDE v2",
+  "msgid": 30,
+  "hex": "fd1c00000001011e0000d00700000ad7233c0ad7a3bcf90fc9bf0000000000000000cdcccc3dbc16",
+  "fields": {
+   "time_boot_ms": 2000,
+   "roll": 0.01,
+   "pitch": -0.02,
+   "yaw": -1.5708,
+   "rollspeed": 0.0,
+   "pitchspeed": 0.0,
+   "yawspeed": 0.1
+  }
+ },
+ {
+  "label": "SYS_STATUS v2",
+  "msgid": 1,
+  "hex": "fd1f0000000101010000010000000100000001000000fa00b83db0040000000000000000000000004db587",
+  "fields": {
+   "onboard_control_sensors_present": 1,
+   "onboard_control_sensors_enabled": 1,
+   "onboard_control_sensors_health": 1,
+   "load": 250,
+   "voltage_battery": 15800,
+   "current_battery": 1200,
+   "battery_remaining": 77,
+   "drop_rate_comm": 0,
+   "errors_comm": 0,
+   "errors_count1": 0,
+   "errors_count2": 0,
+   "errors_count3": 0,
+   "errors_count4": 0
+  }
+ },
+ {
+  "label": "VFR_HUD v2",
+  "msgid": 74,
+  "hex": "fd1300000001014a00006666a6400000a040cd4c1843cdcccc3d0f01305194",
+  "fields": {
+   "airspeed": 5.2,
+   "groundspeed": 5.0,
+   "heading": 271,
+   "throttle": 48,
+   "alt": 152.3,
+   "climb": 0.1
+  }
+ },
+ {
+  "label": "DISTANCE_SENSOR v2",
+  "msgid": 132,
+  "hex": "fd0d0000000101840000340800001400a00fb30b000019e9b3",
+  "fields": {
+   "time_boot_ms": 2100,
+   "min_distance": 20,
+   "max_distance": 4000,
+   "current_distance": 2995,
+   "type": 0,
+   "id": 0,
+   "orientation": 25,
+   "covariance": 0
+  }
+ },
+ {
+  "label": "STATUSTEXT v2",
+  "msgid": 253,
+  "hex": "fd1e0000000101fd0000064c414e4453494748542053494d554c415445442054454c454d45545259eaa6",
+  "fields": {
+   "severity": 6,
+   "text": "LANDSIGHT SIMULATED TELEMETRY"
+  }
+ },
+ {
+  "label": "HEARTBEAT v1",
+  "msgid": 0,
+  "hex": "fe0900010100040000000203510403e16d",
+  "fields": {
+   "type": 2,
+   "autopilot": 3,
+   "base_mode": 81,
+   "custom_mode": 4,
+   "system_status": 4,
+   "mavlink_version": 3
+  }
+ },
+ {
+  "label": "GLOBAL_POSITION_INT v1",
+  "msgid": 33,
+  "hex": "fe1c0001012140e201006922d7061d7b622dec520200f276000000fee600f6ff0e6abf48",
+  "fields": {
+   "time_boot_ms": 123456,
+   "lat": 114762345,
+   "lon": 761428765,
+   "alt": 152300,
+   "relative_alt": 30450,
+   "vx": -512,
+   "vy": 230,
+   "vz": -10,
+   "hdg": 27150
+  }
+ },
+ {
+  "label": "GPS_RAW_INT v1",
+  "msgid": 24,
+  "hex": "fe1e00010118b168de3a000000006922d7061d7b622dec5202005c008c00f701dc69030f834b",
+  "fields": {
+   "time_usec": 987654321,
+   "fix_type": 3,
+   "lat": 114762345,
+   "lon": 761428765,
+   "alt": 152300,
+   "eph": 92,
+   "epv": 140,
+   "vel": 503,
+   "cog": 27100,
+   "satellites_visible": 15
+  }
+ },
+ {
+  "label": "ATTITUDE v1",
+  "msgid": 30,
+  "hex": "fe1c0001011ed00700000ad7233c0ad7a3bcf90fc9bf0000000000000000cdcccc3d3c8b",
+  "fields": {
+   "time_boot_ms": 2000,
+   "roll": 0.01,
+   "pitch": -0.02,
+   "yaw": -1.5708,
+   "rollspeed": 0.0,
+   "pitchspeed": 0.0,
+   "yawspeed": 0.1
+  }
+ },
+ {
+  "label": "SYS_STATUS v1",
+  "msgid": 1,
+  "hex": "fe1f00010101010000000100000001000000fa00b83db0040000000000000000000000004d652a",
+  "fields": {
+   "onboard_control_sensors_present": 1,
+   "onboard_control_sensors_enabled": 1,
+   "onboard_control_sensors_health": 1,
+   "load": 250,
+   "voltage_battery": 15800,
+   "current_battery": 1200,
+   "battery_remaining": 77,
+   "drop_rate_comm": 0,
+   "errors_comm": 0,
+   "errors_count1": 0,
+   "errors_count2": 0,
+   "errors_count3": 0,
+   "errors_count4": 0
+  }
+ },
+ {
+  "label": "VFR_HUD v1",
+  "msgid": 74,
+  "hex": "fe140001014a6666a6400000a040cd4c1843cdcccc3d0f013000bbe3",
+  "fields": {
+   "airspeed": 5.2,
+   "groundspeed": 5.0,
+   "heading": 271,
+   "throttle": 48,
+   "alt": 152.3,
+   "climb": 0.1
+  }
+ },
+ {
+  "label": "DISTANCE_SENSOR v1",
+  "msgid": 132,
+  "hex": "fe0e00010184340800001400a00fb30b00001900e4ac",
+  "fields": {
+   "time_boot_ms": 2100,
+   "min_distance": 20,
+   "max_distance": 4000,
+   "current_distance": 2995,
+   "type": 0,
+   "id": 0,
+   "orientation": 25,
+   "covariance": 0
+  }
+ },
+ {
+  "label": "STATUSTEXT v1",
+  "msgid": 253,
+  "hex": "fe33000101fd064c414e4453494748542053494d554c415445442054454c454d4554525900000000000000000000000000000000000000000069dc",
+  "fields": {
+   "severity": 6,
+   "text": "LANDSIGHT SIMULATED TELEMETRY"
+  }
+ },
+ {
+  "label": "MOUNT_ORIENTATION v2",
+  "msgid": 265,
+  "hex": "fd14000000010109010098080000000000000000afc200004040000089433fd6",
+  "fields": {
+   "time_boot_ms": 2200,
+   "roll": 0.0,
+   "pitch": -87.5,
+   "yaw": 3.0,
+   "yaw_absolute": 274.0
+  }
+ },
+ {
+  "label": "GIMBAL_DEVICE_ATTITUDE_STATUS v2 (pitch -90)",
+  "msgid": 285,
+  "hex": "fd2800000001011d0100fc080000f404353f00000000f40435bf00000000000000000000000000000000000000000c00019a8264",
+  "fields": {
+   "target_system": 1,
+   "target_component": 154,
+   "time_boot_ms": 2300,
+   "flags": 12,
+   "q": [
+    0.7071068,
+    0.0,
+    -0.7071068,
+    0.0
+   ],
+   "angular_velocity_x": 0.0,
+   "angular_velocity_y": 0.0,
+   "angular_velocity_z": 0.0,
+   "failure_flags": 0
+  }
+ }
+]
